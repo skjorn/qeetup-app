@@ -3,3 +3,16 @@
     cursor: pointer;
     font-weight: bold;
 }
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.negative {
+    color: crimson;
+}
+
+.positive {
+    color: green;
+}

@@ -21,6 +21,7 @@ export default class Form extends Component {
 
     render() {
         const { name } = this.state;
+        const { simulationRunning } = this.props;
 
         return (
             <form>
@@ -39,6 +40,16 @@ export default class Form extends Component {
                 >
                     Potvrdit
                 </button>
+                <a 
+                    disabled={simulationRunning} 
+                    className='btn'
+                    onClick={() => { this.props.onSimulationRun() }}
+                    >►</a>
+                <a 
+                    disabled={!simulationRunning} 
+                    className='btn'
+                    onClick={() => { this.props.onSimulationPause() }}
+                    >❚❚</a>
             </form>
         );
     }
